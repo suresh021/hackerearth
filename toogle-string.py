@@ -7,3 +7,5 @@ class Test:
 inputString = input()
 newObj = Test
 newObj.toogleString(inputString) 
+
+
