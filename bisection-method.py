@@ -1,22 +1,20 @@
 # Bisection Method to find root of polynomial
 
-coeff_0=7
-coeff_1=-5
-coeff_2=1
-error=0.001
+error=0.0000000000001
 
-a=7
-b=4
-mid= (a+b)/2
+a=100
+b=-100
+mid= (a+b)/2.0
 itr=1
 
-def func(val):
-	return (val*val-5*val+6) # function is x^2-sx+6
+def func(x):
+	return (x**4-6) # function
 
 if((func(a)*func(b))<0):
 	print("These initial values do not bracket the result.")
 else:
-	while ((mid-a)>error):
+	while (abs(b-a)>error):
+		mid=(a+b)/2.0
 		print("Iteration:"+str(itr))
 		itr+=1
 		if((func(a)*func(mid))>0):
@@ -24,7 +22,7 @@ else:
 		else:
 			b=mid
 
-		mid=(a+b)/2
+		
 
 
 
