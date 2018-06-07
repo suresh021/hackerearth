@@ -20,13 +20,11 @@ def bisect(func,a,b,error):
 def func(x):
 	return (x**4-6) # function
 
-error=0.0000000000001
 
-a=100
-b=-100
-mid= (a+b)/2.0
-itr=1
-
+error=0.0000000000001 #max error
+a=100 # first guess
+b=-100 # second guess
+mid= (a+b)/2.0 # mid value
 
 result=bisect(func,a,b,error)
 print("Root:"+str(result))
